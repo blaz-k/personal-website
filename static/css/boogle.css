@@ -1,0 +1,94 @@
+body {
+    margin:0;
+    color: #5f6368;
+}
+
+.button {
+    width: 30vh;
+    height: 4vh;
+    background-color: #007eff;
+    border-radius: 5px;
+    border: 2px solid grey;
+    color: white;
+}
+
+.create {
+    color: #007eff;
+}
+
+.footer {
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.header {
+    display: flex;
+    height: 9vh;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+h3 {
+    font-size: 22px;
+
+}
+
+.help {
+    display: flex;
+    margin-left: auto;
+    margin-right: 40px;
+    margin-bottom: 50px;
+    color: #007eff;
+}
+
+.input {
+    width: 30vh;
+    height: 4vh;
+    background-color: rgb(234, 254, 129);
+    color: grey;
+    font-size: 16px;
+    border: 2px solid grey;
+}
+
+.img {
+    width: 13vh;
+    margin-bottom: 25px;
+}
+
+.margin-left {
+    margin-left: 8px;
+}
+
+.margin-top{
+    margin-top: 6px;
+}
+
+
+.main {
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.main-head {
+    font-size: 22px;
+    margin-bottom: -34px;
+}
+
+.nav-item {
+    margin-right: 8px;
+}
+
+.square {
+    background-color: rgb(215, 222, 215);
+    width: 40vh;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}

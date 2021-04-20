@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>FAKEBOOK</title>
+
+        <link href="/static/css/fakebook1.css" rel="stylesheet">
+        <link href="/static/css/fakebook.css" rel="stylesheet">
+        <script src="/static/js/fakebook.js"></script>
+
+    </head>
+    <body>
+
+    <!---navbar start--->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Blaz Kmetic</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#about">About me</a>
+                <li class="nav-item">
+                  <a class="nav-link" href="#addfriend">Add a friend</a>
+                </li>
+              </ul>
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search by name" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+    <!---navbar end--->
+
+        <!---carousel start--->
+       <div id="carouselExampleSlidesOnly" class="carousel slide container-fluid" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="/static/img/fakebook.jpeg" class="d-block w-100 img" alt="...">
+            </div>
+         </div>
+       </div>
+
+    <!---carousel end--->
+
+    <!---main start--->
+        <div class=" m-2">
+            <div class="container-fluid text-center mt-5">
+                <h1>BLAZ KMETIC</h1>
+            </div>
+            <div class="text-center m-5">
+              <img src="/static/img/opice.jpg" class="rounded img-fluid" alt="opice">
+            </div>
+         </div>
+    <!---main end--->
+
+    <!--about start-->
+        <div class="container-fluid">
+            <div class="text-center">
+                <h2 id="about">About me</h2>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              <div class="col">
+                <div class="card h-100">
+                  <img src="/static/img/age.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">AGE</h5>
+                    <p class="card-text">Proti 30 hitim</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img src="/static/img/city.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">CITY</h5>
+                    <p class="card-text">Trzin</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img src="/static/img/education.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">EDUCATION</h5>
+                    <p class="card-text">smartninja</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img src="/static/img/hobby.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">HOBBY</h5>
+                    <p class="card-text">Motor</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img src="/static/img/relationship.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">STATUS</h5>
+                    <p class="card-text">in relationship</p>
+                  </div>
+                </div>
+              </div>
+                <div class="col">
+                <div class="card h-100">
+                  <img src="/static/img/photos.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <a href="#"><h5 class="card-title">PHOTOS</h5></a>
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    <!--about end-->
+
+    <!--- add firend start--->
+        <div class="container-fluid mt-5" id="addfriend">
+            <button type="button" class="btn btn-primary btn-lg">ADD A FRIEND</button>
+        </div>
+    <!--- add firend end--->
+
+    <!--- footer start--->
+        <div>
+             <nav class="navbar navbar-expand-lg navbar-light bg-light mt-5" id="contact">
+                <div class="container-fluid">
+                    <div>
+                        <a class="navbar-brand " href="#">CONTACT</a>
+                        <address>
+                          <strong>FAKEBOOK</strong><br>
+                          Podgozdna cesta 5<br>
+                          10000, Ljubljana<br>
+                          <abbr title="Phone">P:</abbr> (033) 456-7890
+                        </address>
+                    </div>
+                      <div class="navbar-nav mr-auto flex-column">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" href="#faq">FAQ</a>
+                        <a class="nav-link" href="#">About us</a>
+                      </div>
+                    </div>
+                </div>
+             </nav>
+        </div>
+<!---footer end--->
+    </body>
+</html>
