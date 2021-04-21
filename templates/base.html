@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      {% block title %}
+      <title></title>
+      {% endblock title %}
+  </head>
+
+  <body>
+    <a href="/">Home</a>
+    <a href="/about">About me</a>
+    <a href="/portfolio">Portfolio</a>
+  {% block link %}
+    <a href="/portfolio/fakebook">Fakebook</a>
+    <a href="/portfolio/boogle">Boogle</a>
+    <a href="/portfolio/hair-salon">Hair-salon</a>
+  {% endblock link %}
+  </body>
+</html>

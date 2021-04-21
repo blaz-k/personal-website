@@ -1,16 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <title>Portfolio</title>
-  </head>
+{% extends "base.html" %}
 
-  <body>
-    <a href="/">Home</a>
-    <a href="/about">About me</a>
+
+
+   {% block title %}
+      <title>PORTFOLIO</title>
+   {% endblock title %}
+
+    {% block link %}
     <a href="/portfolio/fakebook">Fakebook</a>
-    <a href="/portfolio/boogle">Boogle login</a>
+    <a href="/portfolio/boogle">Boogle</a>
     <a href="/portfolio/hair-salon">Hair-salon</a>
+     {% endblock link %}
 
-  </body>
-</html>
+
