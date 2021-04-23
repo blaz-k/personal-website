@@ -1,17 +1,13 @@
 {% extends "base.html" %}
 
-{% block tittle %}
-  <title>SERVICES</title>
-{% endblock tittle %}
+{% block title %}SERVICES{% endblock title %}
 
-{% block about %}
-{% endblock about %}
+{% block class %}class="header-top"{% endblock class %}
 
-{% block resume %}
-{% endblock resume %}
+{% block content %}
 
-{% block services %}
   <!-- ======= Services Section ======= -->
+  <section id="services" class="services">
     <div class="container">
 
       <div class="section-title">
@@ -71,13 +67,5 @@
       </div>
 
     </div>
-{% endblock services %}
-
-{% block portfolio %}
-{% endblock portfolio %}
-
-{% block contact %}
-{% endblock contact %}
-
-{% block credits %}
-{% endblock credits %}
+  </section><!-- End Services Section -->
+{% endblock content %}

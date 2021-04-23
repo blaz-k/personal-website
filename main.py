@@ -49,4 +49,4 @@ def hair_salon():
 
 
 if __name__ == "__main__":
-    app.run(port=8181)
+    app.run(port=8080, use_reloader=True)

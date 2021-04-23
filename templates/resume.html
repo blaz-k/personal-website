@@ -1,16 +1,12 @@
 {% extends "base.html" %}
 
+{% block title %}RESUME{% endblock title %}
 
-{% block tittle %}
-  <title>RESUME</title>
-{% endblock tittle %}
+{% block class %}class="header-top"{% endblock class %}
 
-{% block about %}
-{% endblock about %}
-
-{% block resume %}
-  <!-- ======= Resume Section ======= -->
-
+{% block content %}
+ <!-- ======= Resume Section ======= -->
+  <section id="resume" class="resume">
     <div class="container">
 
       <div class="section-title">
@@ -79,18 +75,6 @@
       </div>
 
     </div>
+  </section><!-- End Resume Section -->
 
-{% endblock resume %}
-
-{% block services %}
-{% endblock services %}
-
-{% block portfolio %}
-{% endblock portfolio %}
-
-{% block contact %}
-{% endblock contact %}
-
-
-{% block credits %}
-{% endblock credits %}
+{% endblock content %}

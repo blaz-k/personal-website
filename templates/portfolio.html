@@ -1,48 +1,13 @@
 {% extends "base.html" %}
 
+{% block title %}PORTFOLIO{% endblock title %}
 
-<!---
-{% block title %}
-    <title>PORTFOLIO</title>
-{% endblock title %}
+{% block class %}class="header-top"{% endblock class %}
 
-{% block link %}
-    <a href="/portfolio/fakebook" class="link-dark">Fakebook</a>
-    <a href="/portfolio/boogle" class="link-dark">Boogle</a>
-    <a href="/portfolio/hair-salon" class="link-dark">Hair-salon</a>
-{% endblock link %}
+{% block content %}
 
-
-{% block headline %}
-    <div>
-      <h1>PORTFOLIO</h1>
-    </div>
-{% endblock headline %}
-
-{% block paragraph %}
-{% endblock paragraph %}
-
-{% block labels %}
-{% endblock labels %}
----->
-
-{% block tittle %}
-  <title>PORTFOLIO</title>
-{% endblock tittle %}
-
-{% block about %}
-{% endblock about %}
-
-{% block resume %}
-{% endblock resume %}
-
-{% block services %}
-{% endblock services %}
-
-
-{% block portfolio %}
   <!-- ======= Portfolio Section ======= -->
-
+  <section id="portfolio" class="portfolio">
     <div class="container">
 
       <div class="section-title">
@@ -192,12 +157,5 @@
       </div>
 
     </div>
-
-{% endblock portfolio %}
-
-{% block contact %}
-{% endblock contact %}
-
-
-{% block credits %}
-{% endblock credits %}
+  </section><!-- End Portfolio Section -->
+{% endblock content %}
