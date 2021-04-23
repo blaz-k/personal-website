@@ -19,7 +19,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url("../img/starwars.jpg") top right no-repeat;
+  background: #040404 url("../img/starwars.jpg") center no-repeat;
   background-size: cover;
   left: 0;
   right: 0;
@@ -337,6 +337,7 @@ section .container {
   background: rgba(0, 0, 0, 0.9);
   padding: 30px;
 }
+
 
 @media (max-width: 768px) {
   section {
