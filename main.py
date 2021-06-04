@@ -1,16 +1,55 @@
-from flask import Flask, render_template
+import os
+from flask import Flask, render_template, request
+from sqla_wrapper import SQLAlchemy
+
+db_url = os.getenv("DATABASE_URL", "sqlite:///db.sqlite").replace("postgres://", "postgresql://", 1)
+db = SQLAlchemy(db_url)
+
+
+class Messages(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    client_name = db.Column(db.String, unique=False)
+    client_email = db.Column(db.String, unique=False)
+    client_subject = db.Column(db.String, unique=False)
+    client_message = db.Column(db.String, unique=False)
+
 
 app = Flask(__name__)
-
-
-@app.route("/")
-def index():
-    return render_template("index.html")
+db.create_all()
 
 
 @app.route("/about")
 def about():
     return render_template("about.html")
+
+
+@app.route("/contact", methods=["GET", "POST"])
+def contact():
+    if request.method == "GET":
+        return render_template("contact.html")
+
+    elif request.method == "POST":
+        client_name = request.form.get("name")
+        client_email = request.form.get("email")
+        client_subject = request.form.get("subject")
+        client_message = request.form.get("message")
+
+        new_message = Messages(client_name=client_name, client_email=client_email,
+                               client_subject=client_subject, client_message=client_message)
+        new_message.save()
+        return render_template("message.html")
+    else:
+        return render_template("error.html")
+
+
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+
+@app.route("/portfolio")
+def portfolio():
+    return render_template("/portfolio.html")
 
 
 @app.route("/resume")
@@ -23,16 +62,7 @@ def services():
     return render_template("services.html")
 
 
-@app.route("/portfolio")
-def portfolio():
-    return render_template("/portfolio.html")
-
-
-@app.route("/contact")
-def contact():
-    return render_template("contact.html")
-
-
+# attachments
 @app.route("/portfolio/fakebook")
 def fakebook():
     return render_template("fakebook.html")
@@ -49,4 +79,4 @@ def hair_salon():
 
 
 if __name__ == "__main__":
-    app.run(use_reloader=True, port=8080)
+    app.run(use_reloader=True)
