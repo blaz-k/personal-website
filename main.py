@@ -78,5 +78,10 @@ def hair_salon():
     return render_template("hair-salon.html")
 
 
+@app.route("/portfolio/hans")
+def anz_hans():
+    return render_template("anz-index.html")
+
+
 if __name__ == "__main__":
     app.run(use_reloader=True)
