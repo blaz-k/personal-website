@@ -1,6 +1,8 @@
 import os
 from flask import Flask, render_template, request
 from sqla_wrapper import SQLAlchemy
+from sendgrid import SendGridAPIClient
+from sendgrid.helpers.mail import Mail
 
 db_url = os.getenv("DATABASE_URL", "sqlite:///db.sqlite").replace("postgres://", "postgresql://", 1)
 db = SQLAlchemy(db_url)
@@ -34,9 +36,24 @@ def contact():
         client_subject = request.form.get("subject")
         client_message = request.form.get("message")
 
-        new_message = Messages(client_name=client_name, client_email=client_email,
-                               client_subject=client_subject, client_message=client_message)
-        new_message.save()
+        body = """
+            name: {0}, 
+            sender_email: {1},
+            message: {2}.
+        """.format(client_name, client_email, client_message)
+
+        email = Mail(from_email="blazyy@gmail.com",
+                     to_emails="blazyy@gmail.com",
+                     subject=client_subject,
+                     html_content=body)
+        email.reply_to = client_email
+
+        # DELETE API KEY BEFORE UPLOADING TO GITHUB!!!!!!!
+        sg_key = os.environ.get("SENDGRID_API_KEY")
+
+        sg = SendGridAPIClient(sg_key)
+        response = sg.send(email)
+
         return render_template("message.html")
     else:
         return render_template("error.html")
