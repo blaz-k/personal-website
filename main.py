@@ -38,7 +38,7 @@ def contact():
 
         body = """
             name: {0},<br> 
-            sender_email: {1},<br>
+            sender_email: {1},<br><br>
             message: {2}.
         """.format(client_name, client_email, client_message)
 
